@@ -14,7 +14,7 @@ if "count" not in st.session_state:
   st.session_state["count"] = 0
 
 if "name" not in st.session_state:
-  st.sesion_state["name"] = ""
+  st.session_state["name"] = ""
 
 st.write(st.session_state)
 
