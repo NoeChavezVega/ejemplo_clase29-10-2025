@@ -9,5 +9,6 @@ if increment :
 
 
 st.write("Count =" , count)
-
+# st. sessio_state= demuestra las cantidades que va guardando 
+st.session_state
 
