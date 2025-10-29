@@ -1,21 +1,28 @@
 import streamlit as st
-st.title("Ejemplo para usar sesion_state")
-  
-# st. sessio_state= demuestra las cantidades que va guardando 
 
+st.title("Ejemplo para usar session_state")
+
+# Inicializar las variables en session_state si no existen
 if "count" not in st.session_state:
-  st.session_state["count"] = 0
+    st.session_state["count"] = 0
 
 if "name" not in st.session_state:
-  st.session_state["name"] = ""
+    st.session_state["name"] = ""
 
-elif "name" st.session_state:
-  st.session_state["name"] = name
-  
+# Botón que aumenta el contador
 if st.button("Click me"):
-  st.session_state["count"] += 1
+    st.session_state["count"] += 1
 
-nombre = st.text_input("Escribe tu nombre")
-st.write(nombre)
+# Entrada de texto para el nombre
+nombre = st.text_input("Escribe tu nombre", st.session_state["name"])
 
+# Guardar el nombre en session_state
+st.session_state["name"] = nombre
+
+# Mostrar el nombre y el contador
+st.write(f"Hola, {st.session_state['name']}!")
+st.write(f"Has hecho clic {st.session_state['count']} veces.")
+
+# Mostrar todo el session_state (opcional, para depurar)
+st.write("Estado actual de sesión:")
 st.write(st.session_state)
