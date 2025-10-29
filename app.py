@@ -8,6 +8,8 @@ if "count" not in st.session_state:
 
 if "name" not in st.session_state:
   st.session_state["name"] = ""
+if "name" st.session_state:
+   st.session_state["name"]= name
 
 if st.button("Click me"):
   st.session_state["count"] += 1
