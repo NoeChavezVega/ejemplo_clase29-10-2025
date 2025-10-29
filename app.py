@@ -12,4 +12,4 @@ st.write("Count =" , count)
 # st. sessio_state= demuestra las cantidades que va guardando 
 st.session_state
 if "key" not in st.session_state:
-  st.session_state("key") = "Value"
+  st.session_state["key] = "Value"
