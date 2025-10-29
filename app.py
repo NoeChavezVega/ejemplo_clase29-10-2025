@@ -15,4 +15,5 @@ if st.button("Click me"):
     
 if nombre :
     st.session_state["name"] = nombre
+    
 st.write(st.session_state)
