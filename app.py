@@ -6,13 +6,15 @@ count = 0
 increment = st.button("Increment")
 if increment :
   count += 1
-
-
+  
 st.write("Count =" , count)
 # st. sessio_state= demuestra las cantidades que va guardando 
 
 if "count" not in st.session_state:
   st.session_state["count"] = 0
+
+if "name" not in st.session_state:
+  st.sesion_state["name"] = ""
 
 st.write(st.session_state)
 
